@@ -262,8 +262,8 @@ public class Calculator
         double result = 0;
         int choice = Convert.ToInt16(input);
         //Dependency
-        string[] magicStrings = fileReader.Read("C:\\Users\\micha\\OneDrive\\Desktop\\3101\\Lab1\\ICT3101_Calculator\\MagicNumbers.txt");
-        // string[] magicStrings = getTheMagic.Read("..\\ICT3101_Calculator\\MagicNumbers.txt");
+        // string[] magicStrings = fileReader.Read("..\\..\\ICT3101_Calculator\\MagicNumbers.txt");
+        string[] magicStrings = fileReader.Read("MagicNumbers.txt");
         if ((choice >= 0) && (choice < magicStrings.Length))
         {
             result = Convert.ToDouble(magicStrings[choice]);
