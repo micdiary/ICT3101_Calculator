@@ -255,5 +255,22 @@ public class Calculator
 
         return Add(ssi, Subtract(csi, Add(deleted, changed)));
     }
+
+    // generate magic number
+    public double GenMagicNum(double input, IFileReader fileReader)
+    {
+        double result = 0;
+        int choice = Convert.ToInt16(input);
+        //Dependency
+        string[] magicStrings = fileReader.Read("C:\\Users\\micha\\OneDrive\\Desktop\\3101\\Lab1\\ICT3101_Calculator\\MagicNumbers.txt");
+        // string[] magicStrings = getTheMagic.Read("..\\ICT3101_Calculator\\MagicNumbers.txt");
+        if ((choice >= 0) && (choice < magicStrings.Length))
+        {
+            result = Convert.ToDouble(magicStrings[choice]);
+        }
+        result = (result > 0) ? (2 * result) : (-2 * result);
+
+        return result;
+    }
 }
 
